@@ -7,7 +7,7 @@ const FeaturedCourse = () => {
     return (
         <div className='my-40'>
             <h1 className='text-6xl font-serif text-purple-500'>Our Featured Courses</h1>
-            <div className='mt-10'>
+            <div className='mt-10 grid sm:grid-cols-1'>
                 <OwlCarousel margin={10} autoplay autoplayTimeout={2000} loop>
                     <div className="card w-96 bg-base-100 shadow-xl">
                         <figure className="px-10 pt-10">
