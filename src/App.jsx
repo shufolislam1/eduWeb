@@ -1,5 +1,4 @@
 
-// import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import CardInBanner from './components/homeUi/CardInBanner'
 import CoursePackage from './components/homeUi/CoursePackage'
@@ -8,7 +7,6 @@ import FeaturedCourse from './components/homeUi/FeaturedCourse'
 import Footer from './components/homeUi/Footer'
 import HomeBanner from './components/homeUi/HomeBanner'
 import Navbar from './components/homeUi/Navbar'
-import Login from './components/LogReg/Login'
 
 
 
@@ -26,9 +24,6 @@ function App() {
       <DreamPart></DreamPart>
       <CoursePackage></CoursePackage>
       <Footer></Footer>
-      {/* <Routes>
-        <Route path='/login' element={<Login></Login>}></Route>
-      </Routes> */}
     </div>
   )
 }
