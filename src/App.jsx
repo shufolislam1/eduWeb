@@ -7,7 +7,6 @@ function App() {
 
   return (
     <div className="App">
-      <button className="btn">Button</button>
       <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
@@ -51,6 +50,7 @@ function App() {
     <a className="btn">Get started</a>
   </div>
 </div>
+
     </div>
   )
 }
