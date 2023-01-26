@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 const HomeBanner = () => {
     return (
         <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-20 mt-12 pt-12 pb-44 max-w-6xl mx-auto '>
-            <div className='text-start mx-auto'>
+            <div className='text-start mx-auto ml-10'>
                 <h1 className='text-6xl text-white font-serif'>
                     <Typewriter
                         options={{

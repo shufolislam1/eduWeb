@@ -4,7 +4,7 @@ const CoursePackage = () => {
     return (
         <div>
             <h1 className='text-5xl font-serif text-purple-500'>Our Packages</h1>
-            <div className='grid lg:grid-cols-3 sm:grid-cols-1 gap-10 my-20 max-w-6xl mx-auto'>
+            <div className='grid lg:grid-cols-3 sm:grid-cols-1 gap-10 my-20 max-w-6xl mx-auto justify-items-center '>
                 <div className="card w-96 bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">
                         <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
