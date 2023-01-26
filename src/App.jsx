@@ -1,6 +1,7 @@
 
 import './App.css'
 import CardInBanner from './components/homeUi/CardInBanner'
+import DreamPart from './components/homeUi/DreamPart'
 import FeaturedCourse from './components/homeUi/FeaturedCourse'
 import Footer from './components/homeUi/Footer'
 import HomeBanner from './components/homeUi/HomeBanner'
@@ -16,6 +17,7 @@ function App() {
       </div>
       <CardInBanner></CardInBanner>
       <FeaturedCourse></FeaturedCourse>
+      <DreamPart></DreamPart>
       <Footer></Footer>
     </div>
   )

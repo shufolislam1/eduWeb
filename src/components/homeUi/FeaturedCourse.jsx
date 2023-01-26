@@ -6,10 +6,10 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 const FeaturedCourse = () => {
     return (
         <div className='my-40'>
-            <h1 className='text-6xl font-serif text-purple-500'>Our Featured Courses</h1>
+            <h1 className='text-5xl font-serif text-purple-500'>Our Featured Courses</h1>
             <div className='mt-10 grid sm:grid-cols-1'>
                 <OwlCarousel margin={10} autoplay autoplayTimeout={2000} loop>
-                    <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card w-96 bg-base-100">
                         <figure className="px-10 pt-10">
                             <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
                         </figure>
@@ -27,7 +27,7 @@ const FeaturedCourse = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card w-96 bg-base-100">
                         <figure className="px-10 pt-10">
                             <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
                         </figure>
@@ -45,7 +45,7 @@ const FeaturedCourse = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card w-96 bg-base-100">
                         <figure className="px-10 pt-10">
                             <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
                         </figure>
