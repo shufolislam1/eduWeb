@@ -2,6 +2,7 @@
 import './App.css'
 import CardInBanner from './components/homeUi/CardInBanner'
 import FeaturedCourse from './components/homeUi/FeaturedCourse'
+import Footer from './components/homeUi/Footer'
 import HomeBanner from './components/homeUi/HomeBanner'
 import Navbar from './components/homeUi/Navbar'
 
@@ -15,6 +16,7 @@ function App() {
       </div>
       <CardInBanner></CardInBanner>
       <FeaturedCourse></FeaturedCourse>
+      <Footer></Footer>
     </div>
   )
 }
