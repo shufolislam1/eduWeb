@@ -4,7 +4,7 @@ const DreamPart = () => {
     return (
         <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-10 mb-20 max-w-6xl mx-auto'>
             <div>
-                <img src="https://i.ibb.co/9cn2NKW/clip-math-teacher-near-the-blackboard.gif" alt="teacher" srcset="" />
+                <img src="https://i.ibb.co/9cn2NKW/clip-math-teacher-near-the-blackboard.gif" alt="teacher" srcSet="" />
             </div>
             <div className='font-serif text-start mx-auto ml-10'>
                 <h1 className='text-4xl text-purple-500'>Let's Make your next success with our expert mentor !</h1>
