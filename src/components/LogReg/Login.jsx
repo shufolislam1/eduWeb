@@ -1,9 +1,12 @@
 import React from 'react';
+import Footer from '../homeUi/Footer';
+import Navbar from '../homeUi/Navbar';
 
 const Login = () => {
     return (
-        <div>
-            <div className="hero min-h-screen  mx-auto bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+        <div className=' bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400'>
+            <Navbar></Navbar>
+            <div className="hero min-h-screen  mx-auto">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <img src="https://i.ibb.co/QvSc8GN/login.gif" alt="login" srcset="" />
@@ -38,6 +41,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

@@ -1,10 +1,13 @@
 import React from 'react';
+import Footer from '../homeUi/Footer';
+import Navbar from '../homeUi/Navbar';
 
 const Registration = () => {
     return (
         <div>
-            <div>
-                <div className="hero min-h-screen  mx-auto bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+            <div className=' bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400'>
+                <Navbar></Navbar>
+                <div className="hero min-h-screen  mx-auto">
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <div className="text-center lg:text-left">
                             <img className='ml-10' src="https://i.ibb.co/NYpGbmz/reg.gif" alt="registration" srcset="" />
@@ -39,6 +42,7 @@ const Registration = () => {
                         </div>
                     </div>
                 </div>
+                <Footer></Footer>
             </div>
         </div>
     );
