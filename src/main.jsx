@@ -17,11 +17,12 @@ import AllMentorsInfo from './components/dashboard/adminDashboard/AllMentorsInfo
 
 const router = createBrowserRouter([
   { path: '/', element: <App></App> },
-  { path: 'login', element: <Login></Login> },
-  { path: 'registration', element: <Registration></Registration> },
-  { path: 'udashboard', element: <UserDashboard></UserDashboard> },
+  { path: '/login', element: <Login></Login> },
+  { path: '/registration', element: <Registration></Registration> },
+  { path: '/udashboard', element: <UserDashboard></UserDashboard> },
   {
-    path: 'adashboard', element: <AdminDashboard></AdminDashboard>, children: [
+    path: '/adashboard', element: <AdminDashboard></AdminDashboard>, children: [
+      { path: '/adashboard/allUserInfo', element: <AllUserInfo></AllUserInfo> },
       { path: '/adashboard/allUserInfo', element: <AllUserInfo></AllUserInfo> },
       { path: '/adashboard/allCourseInfo', element: <AllCourseInfo></AllCourseInfo> },
       { path: '/adashboard/allMentorsInfo', element: <AllMentorsInfo></AllMentorsInfo> }
