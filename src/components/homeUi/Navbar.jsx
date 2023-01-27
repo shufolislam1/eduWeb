@@ -23,9 +23,10 @@ const Navbar = () => {
                                 </ul>
                             </li>
                             <li><a>Item 3</a></li>
+                            <li><Link to='/udashboard'>User dashboard/ My classes</Link></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl text-white">Edu Web</a>
+                    <Link to='/' className="btn btn-ghost normal-case text-xl text-white">Edu Web</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-white">
@@ -41,6 +42,7 @@ const Navbar = () => {
                             </ul>
                         </li>
                         <li><a>Item 3</a></li>
+                        <li><Link to='/udashboard'>User dashboard/ My classes</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end gap-5">

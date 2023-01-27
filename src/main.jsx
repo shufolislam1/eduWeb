@@ -9,12 +9,14 @@ import {
   createBrowserRouter,
   RouterProvider
 } from "react-router-dom";
+import UserDashboard from './components/dashboard/UserDashboard';
 
 
 const router = createBrowserRouter([
   {path:'/', element: <App></App>},
   {path:'login', element: <Login></Login>},
-  {path:'registration', element: <Registration></Registration>}
+  {path:'registration', element: <Registration></Registration>},
+  {path: 'udashboard', element: <UserDashboard></UserDashboard>}
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
