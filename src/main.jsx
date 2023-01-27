@@ -9,8 +9,8 @@ import {
   createBrowserRouter,
   RouterProvider
 } from "react-router-dom";
-import UserDashboard from './components/dashboard/UserDashboard';
-import AdminDashboard from './components/dashboard/AdminDashboard';
+import UserDashboard from './components/dashboard/userDashboard/UserDashboard';
+import AdminDashboard from './components/dashboard/adminDashboard/AdminDashboard';
 
 
 const router = createBrowserRouter([

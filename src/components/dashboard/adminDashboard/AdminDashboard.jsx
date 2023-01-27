@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from '../homeUi/Footer';
-import Navbar from '../homeUi/Navbar';
+import Footer from '../../homeUi/Footer';
+import Navbar from '../../homeUi/Navbar';
 
 const AdminDashboard = () => {
     return (
