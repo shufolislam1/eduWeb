@@ -24,6 +24,7 @@ const Navbar = () => {
                             </li>
                             <li><a>Item 3</a></li>
                             <li><Link to='/udashboard'>User dashboard/ My classes</Link></li>
+                            <li><Link to='/adashboard'>Admin dashboard</Link></li>
                         </ul>
                     </div>
                     <Link to='/' className="btn btn-ghost normal-case text-xl text-white">Edu Web</Link>
@@ -43,6 +44,7 @@ const Navbar = () => {
                         </li>
                         <li><a>Item 3</a></li>
                         <li><Link to='/udashboard'>User dashboard/ My classes</Link></li>
+                        <li><Link to='/adashboard'>Admin dashboard</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end gap-5">
