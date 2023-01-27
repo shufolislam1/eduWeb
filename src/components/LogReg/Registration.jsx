@@ -10,7 +10,7 @@ const Registration = () => {
                 <div className="hero min-h-screen  mx-auto">
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <div className="text-center lg:text-left">
-                            <img className='ml-10' src="https://i.ibb.co/NYpGbmz/reg.gif" alt="registration" srcset="" />
+                            <img className='ml-10' src="https://i.ibb.co/NYpGbmz/reg.gif" alt="registration" srcSet="" />
                         </div>
                         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                             <div className="card-body ">

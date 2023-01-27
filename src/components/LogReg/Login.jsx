@@ -9,7 +9,7 @@ const Login = () => {
             <div className="hero min-h-screen  mx-auto">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
-                        <img src="https://i.ibb.co/QvSc8GN/login.gif" alt="login" srcset="" />
+                        <img src="https://i.ibb.co/QvSc8GN/login.gif" alt="login" srcSet="" />
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body ">
