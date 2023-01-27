@@ -6,7 +6,6 @@ const Login = () => {
             <div className="hero min-h-screen  mx-auto bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold text-white font-serif">Login now!</h1>
                         <img src="https://i.ibb.co/QvSc8GN/login.gif" alt="login" srcset="" />
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
