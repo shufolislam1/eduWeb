@@ -7,6 +7,7 @@ import FeaturedCourse from './components/homeUi/FeaturedCourse'
 import Footer from './components/homeUi/Footer'
 import HomeBanner from './components/homeUi/HomeBanner'
 import Navbar from './components/homeUi/Navbar'
+import Support from './components/homeUi/Support'
 
 
 
@@ -23,6 +24,7 @@ function App() {
       <FeaturedCourse></FeaturedCourse>
       <DreamPart></DreamPart>
       <CoursePackage></CoursePackage>
+      <Support></Support>
       <Footer></Footer>
     </div>
   )

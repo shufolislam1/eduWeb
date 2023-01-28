@@ -2,7 +2,7 @@ import React from 'react';
 
 const DreamPart = () => {
     return (
-        <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-10 mb-20 max-w-6xl mx-auto'>
+        <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-10 mb-20 max-w-6xl mx-auto item'>
             <div>
                 <img src="https://i.ibb.co/9cn2NKW/clip-math-teacher-near-the-blackboard.gif" alt="teacher" srcSet="" />
             </div>
