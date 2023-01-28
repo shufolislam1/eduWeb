@@ -5,7 +5,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const FeaturedCourse = () => {
     return (
-        <div className='my-40'>
+        <div className='my-40' id='featuredCourse'>
             <h1 className='text-5xl font-serif text-purple-500'>Our Featured Courses</h1>
             <div className=''>
                 <OwlCarousel className='mt-10 grid lg:grid-cols-3 sm:grid-cols-1 mx-auto' margin={10} autoplay autoplayTimeout={2000} loop>
