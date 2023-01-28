@@ -14,6 +14,7 @@ import AllUserInfo from './components/dashboard/adminDashboard/AllUserInfo';
 import AllCourseInfo from './components/dashboard/adminDashboard/AllCourseInfo';
 import AllMentorsInfo from './components/dashboard/adminDashboard/AllMentorsInfo';
 import AllStats from './components/dashboard/adminDashboard/AllStats';
+import PageNotFound from './components/homeUi/PageNotFound';
 
 
 const router = createBrowserRouter([
@@ -28,7 +29,8 @@ const router = createBrowserRouter([
       { path: '/adashboard/courseInfo', element: <AllCourseInfo></AllCourseInfo> },
       { path: '/adashboard/mentorsInfo', element: <AllMentorsInfo></AllMentorsInfo> }
     ]
-  }
+  },
+  {path: '*', element: <PageNotFound></PageNotFound>}
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
