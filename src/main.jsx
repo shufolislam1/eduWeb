@@ -22,10 +22,9 @@ const router = createBrowserRouter([
   { path: '/udashboard', element: <UserDashboard></UserDashboard> },
   {
     path: '/adashboard', element: <AdminDashboard></AdminDashboard>, children: [
-      { path: '/adashboard/allUserInfo', element: <AllUserInfo></AllUserInfo> },
-      { path: '/adashboard/allUserInfo', element: <AllUserInfo></AllUserInfo> },
-      { path: '/adashboard/allCourseInfo', element: <AllCourseInfo></AllCourseInfo> },
-      { path: '/adashboard/allMentorsInfo', element: <AllMentorsInfo></AllMentorsInfo> }
+      { path: '/adashboard', element: <AllUserInfo></AllUserInfo> },
+      { path: '/adashboard/courseInfo', element: <AllCourseInfo></AllCourseInfo> },
+      { path: '/adashboard/mentorsInfo', element: <AllMentorsInfo></AllMentorsInfo> }
     ]
   }
 ])
