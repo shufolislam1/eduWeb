@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 
 const HomeBanner = () => {
     return (
-        <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-20 mt-12 pt-12 pb-44 max-w-6xl mx-auto '>
+        <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-20 pt-12 pb-44  mx-auto bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400'>
             <div className='text-start mx-auto ml-10'>
                 <h1 className='text-6xl text-white font-serif'>
                     <Typewriter

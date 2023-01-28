@@ -2,7 +2,7 @@ import React from 'react';
 
 const CardInBanner = () => {
     return (
-        <div className='grid lg:grid-cols-3 sm:grid-cols-1 gap-16 justify-items-center max-w-6xl mx-auto -mt-28'>
+        <div className='grid lg:grid-cols-3 sm:grid-cols-1 gap-16 justify-items-center max-w-6xl mx-auto -mt-24'>
             <div className="card lg:card-side bg-base-100 shadow-xl w-96">
                 <figure><img src="https://i.ibb.co/8cbgjjH/mentor.gif" alt="Expert Mentor" /></figure>
                 <div className="card-body text-start font-serif">
