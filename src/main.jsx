@@ -13,6 +13,7 @@ import AdminDashboard from './components/dashboard/adminDashboard/AdminDashboard
 import AllUserInfo from './components/dashboard/adminDashboard/AllUserInfo';
 import AllCourseInfo from './components/dashboard/adminDashboard/AllCourseInfo';
 import AllMentorsInfo from './components/dashboard/adminDashboard/AllMentorsInfo';
+import AllStats from './components/dashboard/adminDashboard/AllStats';
 
 
 const router = createBrowserRouter([
@@ -22,7 +23,8 @@ const router = createBrowserRouter([
   { path: '/udashboard', element: <UserDashboard></UserDashboard> },
   {
     path: '/adashboard', element: <AdminDashboard></AdminDashboard>, children: [
-      { path: '/adashboard', element: <AllUserInfo></AllUserInfo> },
+      { path: '/adashboard', element: <AllStats></AllStats> },
+      { path: '/adashboard/userInfo', element: <AllUserInfo></AllUserInfo> },
       { path: '/adashboard/courseInfo', element: <AllCourseInfo></AllCourseInfo> },
       { path: '/adashboard/mentorsInfo', element: <AllMentorsInfo></AllMentorsInfo> }
     ]

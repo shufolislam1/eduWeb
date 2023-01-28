@@ -25,7 +25,8 @@ const AdminDashboard = () => {
                         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                         <ul className="menu p-4 w-80 bg-base-100 text-base-content rounded-r-lg font-serif">
                             {/* <!-- Sidebar content here --> */}
-                            <li><Link to='/adashboard'>User Info</Link></li>
+                            <li><Link to='/adashboard'>Statistics</Link></li>
+                            <li><Link to='/adashboard/userInfo'>User Info</Link></li>
                             <li><Link to='/adashboard/courseInfo'>Courses Info</Link></li>
                             <li><Link to='/adashboard/mentorsInfo'>Mentors Info</Link></li>
                         </ul>

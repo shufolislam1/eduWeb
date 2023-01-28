@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Footer from '../homeUi/Footer';
 import Navbar from '../homeUi/Navbar';
 
@@ -26,6 +27,10 @@ const Login = () => {
                                 <input type="text" placeholder="password" className="input input-bordered" />
                                 <label className="label mt-4 ">
                                     <a href="#" className="label-text-alt link link-hover text-pink-500">Forgot password?</a>
+                                </label>
+                                <label className="label mt-4 ">
+                                    <h1>Don't have an account?</h1>
+                                    <Link to='/registration' className="label-text-alt link link-hover text-pink-500">Join Now!</Link>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
