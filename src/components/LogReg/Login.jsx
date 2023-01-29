@@ -2,8 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../homeUi/Footer';
 import Navbar from '../homeUi/Navbar';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import app from '../../../firebase/firebase.config';
+
+
+// google login code
+const auth = getAuth(app);
+const provider =new GoogleAuthProvider()
 
 const Login = () => {
+    const handleGoogleLogin = () => {
+        signInWithPopup(auth, provider)
+        .then((result) => {
+            const user = result.user;
+            console.log(user);
+        })
+        .catch((error) => {
+            console.log('error: ', error);
+        })
+    }
     return (
         <div className=' bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400'>
             <Navbar></Navbar>
@@ -34,7 +51,7 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2  rounded-full shadow-md group">
+                                <button onClick={handleGoogleLogin} className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2  rounded-full shadow-md group">
                                     <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
                                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                                     </span>
