@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../homeUi/Footer';
 import Navbar from '../homeUi/Navbar';
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import app from '../../../firebase/firebase.config';
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import auth from '../../../firebase/firebase.config';
 
 
 // google login code
-const auth = getAuth(app);
-const provider =new GoogleAuthProvider()
+
+const provider =new GoogleAuthProvider();
 
 const Login = () => {
     const handleGoogleLogin = () => {
