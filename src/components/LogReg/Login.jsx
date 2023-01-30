@@ -6,6 +6,7 @@ import { AuthContext } from '../../contexts/UserContext';
 import Footer from '../homeUi/Footer';
 import Navbar from '../homeUi/Navbar';
 
+// google provider
 const provider = new GoogleAuthProvider();
 const Login = () => {
     
