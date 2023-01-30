@@ -15,8 +15,8 @@ const Login = () => {
     // const googleLoginHandler = () => {
     //     createUserWithGoogle(auth, provider)
     // }
-    const {user} = useContext(AuthContext)
-    console.log(user);
+    const {loginWithEmailPass} = useContext(AuthContext);
+
     const handleLogin = event => {
         event.preventDefault();
 
@@ -24,8 +24,15 @@ const Login = () => {
         const email = form?.email?.value;
         const password = form?.password?.value;
 
-        console.log(name, email, password);
-
+        // login with email and pasword
+        loginWithEmailPass(email, password)
+        .then((result) => {
+            const user = result.user;
+            console.log(user);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
     }
     return (
         <div className=' bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400'>
