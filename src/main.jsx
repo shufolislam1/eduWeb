@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import './index.css' 
+import './index.css'
 import Login from './components/LogReg/Login';
 import Registration from './components/LogReg/Registration';
 import {
@@ -15,6 +15,7 @@ import AllCourseInfo from './components/dashboard/adminDashboard/AllCourseInfo';
 import AllMentorsInfo from './components/dashboard/adminDashboard/AllMentorsInfo';
 import AllStats from './components/dashboard/adminDashboard/AllStats';
 import PageNotFound from './components/homeUi/PageNotFound';
+import UserContext from './contexts/UserContext';
 
 
 const router = createBrowserRouter([
@@ -30,13 +31,15 @@ const router = createBrowserRouter([
       { path: '/adashboard/mentorsInfo', element: <AllMentorsInfo></AllMentorsInfo> }
     ]
   },
-  {path: '*', element: <PageNotFound></PageNotFound>}
+  { path: '*', element: <PageNotFound></PageNotFound> }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router}>
-      <App />
+      <UserContext>
+        <App />
+      </UserContext>
     </RouterProvider>
   </React.StrictMode>,
 )
