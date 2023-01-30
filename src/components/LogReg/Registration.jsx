@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/UserContext';
 import Footer from '../homeUi/Footer';
 import Navbar from '../homeUi/Navbar';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+// sweet alert things
+const MySwal = withReactContent(Swal);
 
 // google provider
 const provider = new GoogleAuthProvider();
@@ -12,14 +17,24 @@ const Registration = () => {
     const { cUserEmailPass, createUserWithGoogle } = useContext(AuthContext);
 
     //************* login with google***********
-    const googleLoginHandler = () => {
+    const googleResgistrationHandler = () => {
         createUserWithGoogle(provider)
             .then((result) => {
                 const user = result.user;
-                console.log(user);
+                if (user) {
+                    MySwal.fire({
+                        title: "Done!",
+                        text: "Registration with Google successfull!",
+                        icon: "success",
+                    })
+                }
             })
             .catch((error) => {
-                console.log(error.message);
+                if (error) {
+                    MySwal.fire({
+                        title: <p>`{error.message}`</p>,
+                    })
+                }
             })
     }
 
@@ -35,9 +50,22 @@ const Registration = () => {
         cUserEmailPass(email, password)
             .then((result) => {
                 const user = result.user;
-                console.log(user);
+                if (user) {
+                    MySwal.fire({
+                        title: "Done!",
+                        text: "Registration successfull!",
+                        icon: "success",
+                    })
+                }
             })
-            .catch(error => console.log(error))
+            .catch((error) => {
+                if (error) {
+                    MySwal.fire({
+                        title: <p>`{error.message}`</p>,
+                    })
+                }
+            })
+        event.target.reset();
 
     }
     return (
@@ -85,7 +113,7 @@ const Registration = () => {
                             </form>
                             <div className="divider">OR</div>
                             <div className="h-20">
-                                <button onClick={googleLoginHandler} className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2  rounded-full shadow-md group">
+                                <button onClick={googleResgistrationHandler} className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2  rounded-full shadow-md group">
                                     <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
                                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                                     </span>
