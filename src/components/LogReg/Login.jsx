@@ -6,6 +6,10 @@ import { AuthContext } from '../../contexts/UserContext';
 import Footer from '../homeUi/Footer';
 import Navbar from '../homeUi/Navbar';
 import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+// sweet alert things
+const MySwal = withReactContent(Swal);
 
 // google provider
 const provider = new GoogleAuthProvider();
@@ -19,24 +23,20 @@ const Login = () => {
         createUserWithGoogle(provider)
             .then((result) => {
                 const user = result.user;
-                // console.log(user);
                 if (user) {
-                    Swal.fire(
-                        'Done!',
-                        'Login with Google successfull!',
-                        'success'
-                    )
+                    MySwal.fire({
+                        title: "Done!",
+                        text: "Login with Google successfull!",
+                        icon: "success",
+                    })
                 }
             })
             .catch((error) => {
-                if(error){
-                    Swal.fire(
-                        'Opps!',
-                        `{error.message}`,
-                        'error'
-                    )
+                if (error) {
+                    MySwal.fire({
+                        title: <p>`{error.message}`</p>,
+                    })
                 }
-                // console.log(error.message);
             })
     }
 
@@ -51,11 +51,22 @@ const Login = () => {
         loginWithEmailPass(email, password)
             .then((result) => {
                 const user = result.user;
-                console.log(user);
+                if (user) {
+                    MySwal.fire({
+                        title: "Done!",
+                        text: "Login successfull!",
+                        icon: "success",
+                    })
+                }
             })
             .catch((error) => {
-                console.log(error);
+                if (error) {
+                    MySwal.fire({
+                        title: <p>`{error.message}`</p>,
+                    })
+                }
             })
+        event.target.reset();
     }
     return (
         <div className=' bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400'>
