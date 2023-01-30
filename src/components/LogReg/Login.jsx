@@ -15,6 +15,8 @@ const Login = () => {
     // const googleLoginHandler = () => {
     //     createUserWithGoogle(auth, provider)
     // }
+    const {user} = useContext(AuthContext)
+    console.log(user);
     const handleLogin = event => {
         event.preventDefault();
 

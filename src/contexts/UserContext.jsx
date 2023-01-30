@@ -18,11 +18,14 @@ const UserContext = ({ children }) => {
     // }
 
     // create user with email and password
-    const cUserEmailPass = (email, password) => {
-        return createUserWithEmailAndPassword(auth, email, password)
-    }
+    // const cUserEmailPass = (email, password) => {
+    //     return createUserWithEmailAndPassword(auth, email, password)
+    // }
 
-    const authInfo = { createUserWithGoogle, cUserEmailPass }
+    const user = {displayName: 'shufol'}
+
+    // const authInfo = { createUserWithGoogle, cUserEmailPass }
+    const authInfo = { user: user }
     return (
         <div>
             <AuthContext.Provider value={authInfo}>
