@@ -1,8 +1,10 @@
 import React from 'react';
+import Jump from 'react-reveal/Jump';
 
 const CoursePackage = () => {
     return (
         <div id='package'>
+            <Jump>
             <h1 className='text-5xl font-serif text-purple-500'>Our Packages</h1>
             <div className='grid lg:grid-cols-3 sm:grid-cols-1 gap-10 my-20 max-w-6xl mx-auto justify-items-center '>
                 <div className="card w-96 bg-base-100 shadow-xl">
@@ -115,6 +117,7 @@ const CoursePackage = () => {
                 </div>
 
             </div>
+            </Jump>
         </div>
     );
 };

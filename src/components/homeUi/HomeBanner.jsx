@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
+import Fade from 'react-reveal/Fade';
 
 const HomeBanner = () => {
     return (
         <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-20 pt-12 pb-44  mx-auto bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400'>
+            <Fade left>
             <div className='text-start mx-auto ml-10'>
                 <h1 className='text-6xl text-white font-serif'>
                     <Typewriter
@@ -24,9 +26,13 @@ const HomeBanner = () => {
                     <span className="relative invisible">Join Us Free</span>
                 </Link>
             </div>
+            </Fade>
+            <Fade right>
+
             <div className=''>
                 <img src="https://i.ibb.co/vJFTw4b/twinkle-online-education.gif" alt="education" srcSet="" />
             </div>
+            </Fade>
         </div>
     );
 };

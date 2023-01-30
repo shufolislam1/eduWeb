@@ -1,8 +1,10 @@
 import React from 'react';
+import Jump from 'react-reveal/Jump';
 
 const CardInBanner = () => {
     return (
         <div className='grid lg:grid-cols-3 sm:grid-cols-1 gap-16 justify-items-center max-w-6xl mx-auto -mt-24'>
+            <Jump>
             <div className="card lg:card-side bg-base-100 shadow-xl w-96">
                 <figure><img src="https://i.ibb.co/8cbgjjH/mentor.gif" alt="Expert Mentor" /></figure>
                 <div className="card-body text-start font-serif">
@@ -24,6 +26,7 @@ const CardInBanner = () => {
                     <p>Click the button to listen on Spotiwhy app.</p>
                 </div>
             </div>
+            </Jump>
         </div>
     );
 };
