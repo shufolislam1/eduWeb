@@ -5,24 +5,39 @@ import auth from '../../../firebase/firebase.config';
 import { AuthContext } from '../../contexts/UserContext';
 import Footer from '../homeUi/Footer';
 import Navbar from '../homeUi/Navbar';
+import Swal from 'sweetalert2'
 
 // google provider
 const provider = new GoogleAuthProvider();
 const Login = () => {
-    
+
     // import necessary things from context.
-    const {loginWithEmailPass, createUserWithGoogle} = useContext(AuthContext);
+    const { loginWithEmailPass, createUserWithGoogle } = useContext(AuthContext);
 
     //************* login with google***********
     const googleLoginHandler = () => {
         createUserWithGoogle(provider)
-        .then((result) => {
-            const user = result.user;
-            console.log(user);
-        })
-        .catch((error) => {
-            console.log(error.message);
-        })
+            .then((result) => {
+                const user = result.user;
+                // console.log(user);
+                if (user) {
+                    Swal.fire(
+                        'Done!',
+                        'Login with Google successfull!',
+                        'success'
+                    )
+                }
+            })
+            .catch((error) => {
+                if(error){
+                    Swal.fire(
+                        'Opps!',
+                        `{error.message}`,
+                        'error'
+                    )
+                }
+                // console.log(error.message);
+            })
     }
 
     //************* login with email and pasword***********
@@ -34,13 +49,13 @@ const Login = () => {
         const password = form?.password?.value;
 
         loginWithEmailPass(email, password)
-        .then((result) => {
-            const user = result.user;
-            console.log(user);
-        })
-        .catch((error) => {
-            console.log(error);
-        })
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
     }
     return (
         <div className=' bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400'>
