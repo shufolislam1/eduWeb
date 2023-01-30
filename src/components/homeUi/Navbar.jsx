@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
         <div className='bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 sticky top-0 z-40'>
-
                 <div className="navbar">
                     <div className="navbar-start">
                         <div className="dropdown">
