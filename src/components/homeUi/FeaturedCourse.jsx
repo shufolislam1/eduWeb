@@ -11,8 +11,8 @@ const FeaturedCourse = () => {
                 <Zoom>
                     <h1 className='text-5xl font-serif text-purple-500'>Our Featured Courses</h1>
                     <div className=''>
-                        <OwlCarousel className='mt-10 grid lg:grid-cols-3 sm:grid-cols-1 mx-auto' margin={10} autoplay autoplayTimeout={3000} loop>
-                            <div className="card bg-base-100">
+                        <OwlCarousel className='grid lg:grid-cols-3 sm:grid-cols-1 mt-10' margin={10} autoplay autoplayTimeout={3000} loop>
+                            <div className="card bg-base-100 shadow-xl">
                                 <figure className="px-10 pt-10">
                                     <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
                                 </figure>
