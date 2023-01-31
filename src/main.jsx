@@ -16,15 +16,16 @@ import AllMentorsInfo from './components/dashboard/adminDashboard/AllMentorsInfo
 import AllStats from './components/dashboard/adminDashboard/AllStats';
 import PageNotFound from './components/homeUi/PageNotFound';
 import UserContext from './contexts/UserContext';
+import ProtectedRoute from './components/protected/ProtectedRoute';
 
 
 const router = createBrowserRouter([
   { path: '/', element: <App></App> },
   { path: '/login', element: <Login></Login> },
   { path: '/registration', element: <Registration></Registration> },
-  { path: '/udashboard', element: <UserDashboard></UserDashboard> },
+  { path: '/udashboard', element: <ProtectedRoute> <UserDashboard></UserDashboard></ProtectedRoute> },
   {
-    path: '/adashboard', element: <AdminDashboard></AdminDashboard>, children: [
+    path: '/adashboard', element: <ProtectedRoute> <AdminDashboard></AdminDashboard></ProtectedRoute>, children: [
       { path: '/adashboard', element: <AllStats></AllStats> },
       { path: '/adashboard/userInfo', element: <AllUserInfo></AllUserInfo> },
       { path: '/adashboard/courseInfo', element: <AllCourseInfo></AllCourseInfo> },
