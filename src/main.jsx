@@ -23,7 +23,7 @@ const router = createBrowserRouter([
   { path: '/', element: <App></App> },
   { path: '/login', element: <Login></Login> },
   { path: '/registration', element: <Registration></Registration> },
-  { path: '/udashboard', element: <ProtectedRoute> <UserDashboard></UserDashboard></ProtectedRoute> },
+  { path: '/udashboard', element: <UserDashboard></UserDashboard> },
   {
     path: '/adashboard', element: <ProtectedRoute> <AdminDashboard></AdminDashboard></ProtectedRoute>, children: [
       { path: '/adashboard', element: <AllStats></AllStats> },
